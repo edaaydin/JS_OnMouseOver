@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            border: 3px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="div1">Eda Aydın</div>
+
+    <script>
+        // OnMouseOver = mouse ile uzerine gelindiginde
+        // onMouseout = mouse ile uzerinden cıkıldıgında/gidildiginde
+        // onmousedown = mouse ile basılıyken
+        // onmouseup = mouse bırakıldıgında
+
+        // soru : mouse ile uzerine gelindiginde border yesil solid ve kalın olsun, uzerindeki yazı degissin
+        // uzerine gelindiginde eski haline geri gelsin.
+        // mouse basılıyken mousea basıldı yazsın.
+        // mouse bırakıldıgında mouse yazsın.
+
+
+
+        // Div elementini seçiyoruz
+        const div1 = document.getElementById('div1');
+
+        // Mouse üzerine geldiğinde (onmouseover)
+        div1.onmouseover = function () {
+            div1.style.border = '5px solid green'; // Kalın ve yeşil border
+            div1.innerText = 'Üzerinde';           // Yazıyı değiştir
+        };
+
+        // Mouse üzerinden ayrıldığında (onmouseout)
+        div1.onmouseout = function () {
+            div1.style.border = '3px solid purple'; // Eski border stiline geri döner
+            div1.innerText = 'Eda Aydın';          // Yazıyı eski haline getirir
+        };
+
+        // Mouse basılıyken (onmousedown)
+        div1.onmousedown = function () {
+            div1.innerText = 'Mousea Basıldı'; // Yazıyı "Mousea Basıldı" olarak değiştirir
+        };
+
+        // Mouse bırakıldığında (onmouseup)
+        div1.onmouseup = function () {
+            div1.innerText = 'Mouse'; // Yazıyı "Mouse" olarak değiştirir
+        };
+
+    </script>
+</body>
+
+</html>
